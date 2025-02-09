@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.wrapper {
+    position: relative;
+    font-family: "Montserrat", serif;
+    width: 750px;
+    height: 450px;
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: #11112e;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.63);
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -60px;
+        left: -110px;
+        width: 500px;
+        height: 500px;
+        background-image: url('../src/assets/cloud.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+        transform: scaleX(-1);
+        z-index: 1;
+    }
+
+    input {
+        margin-top: 30px;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid white;
+        font-family: inherit;
+        color: white;
+        font-size: 17px;
+        padding: 5px;
+        padding-left: 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        font-family: inherit;
+        border: 0;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        color: white;
+        background: rgb(9,49,121);
+        background: linear-gradient(90deg, rgba(9,49,121,1) 0%, rgba(0,44,255,1) 94%);
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 200ms;
+        -webkit-appearance: none;
+
+        &:active {
+            transform: translateY(2px);
+            transition: all 200ms;
+        }
+    }
+
+    p {
+        font-size: 19px;
+        margin-top: 5px;
+    }
+
+    .error {
+        color: rgba(255, 0, 0, 0.78);
+        font-weight: 400;
+        font-size: 15px;
+    }
+}
+
+.input-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    row-gap: 10px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.sity-span {
+    border-bottom: 2px solid yellow;
+}
+
+.values-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 40px;
+    justify-content: center;
+    z-index: 2;
+}
