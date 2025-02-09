@@ -47,13 +47,12 @@ export default {
       info: null,
       isLoaded: false,
       images: [
-            import.meta.env.VITE_WEBSITE_URL + "/src/assets/icon/thermometer.svg",
-            import.meta.env.VITE_WEBSITE_URL + "/src/assets/icon/hand.svg",
-            import.meta.env.VITE_WEBSITE_URL + "/src/assets/icon/increasing.svg",
-            import.meta.env.VITE_WEBSITE_URL + "/src/assets/icon/decreasing.svg",
-            import.meta.env.VITE_WEBSITE_URL + "/src/assets/icon/droplet.svg",
-            import.meta.env.VITE_WEBSITE_URL + "/src/assets/icon/anatomical-heart.svg"
-          
+            "./images/icon/thermometer.svg",
+            "./images/icon/hand.svg",
+            "./images/icon/increasing.svg",
+            "./images/icon/decreasing.svg",
+            "./images/icon/droplet.svg",
+            "./images/icon/anatomical-heart.svg"
       ]
     }
   },
