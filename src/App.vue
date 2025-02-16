@@ -11,12 +11,12 @@
     </div>
 
     <div class="values-list" v-if="info != null">
-        <WeatherItem :title="'Температура'" :value="info.temp + ' °C'" :link="images[0]"  :isLoaded="isLoaded" :setLoaded="setLoaded"/>
-        <WeatherItem :title="'Ощущается как'" :value="info.feels_like + ' °C'" :link="images[1]" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
-        <WeatherItem :title="'Макс. температура'" :value="info.temp_max + ' °C'" :link="images[2]" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
-        <WeatherItem :title="'Мин. температура'" :value="info.temp_min + ' °C'" :link="images[3]" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
-        <WeatherItem :title="'Влажность воздуха'" :value="info.humidity + ' %'" :link="images[4]" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
-        <WeatherItem :title="'Давление'" :value="info.pressure+ ' Па'" :link="images[5]" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
+        <WeatherItem :title="'Температура'" :value="info.temp + ' °C'" :link="'./images/icon/thermometer.svg'"  :isLoaded="isLoaded" :setLoaded="setLoaded"/>
+        <WeatherItem :title="'Ощущается как'" :value="info.feels_like + ' °C'" :link="'./images/icon/hand.svg'" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
+        <WeatherItem :title="'Макс. температура'" :value="info.temp_max + ' °C'" :link="'./images/icon/increasing.svg'" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
+        <WeatherItem :title="'Мин. температура'" :value="info.temp_min + ' °C'" :link="'./images/icon/decreasing.svg'" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
+        <WeatherItem :title="'Влажность воздуха'" :value="info.humidity + ' %'" :link="'./images/icon/droplet.svg'" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
+        <WeatherItem :title="'Давление'" :value="info.pressure+ ' Па'" :link="'./images/icon/anatomical-heart.svg'" :isLoaded="isLoaded" :setLoaded="setLoaded"/>
     </div>
 
 
@@ -45,15 +45,7 @@ export default {
       city: '',
       error: '',
       info: null,
-      isLoaded: false,
-      images: [
-            "./images/icon/thermometer.svg",
-            "./images/icon/hand.svg",
-            "./images/icon/increasing.svg",
-            "./images/icon/decreasing.svg",
-            "./images/icon/droplet.svg",
-            "./images/icon/anatomical-heart.svg"
-      ]
+      isLoaded: false
     }
   },
   methods: {
